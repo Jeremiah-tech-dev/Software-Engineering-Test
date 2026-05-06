@@ -12,6 +12,7 @@ long pthFactor(long n, long p) {
         if (n % i == 0) {
             small[k++] = i; // small[0]=1, small[1]=first prime factor, etc.
         }
+        }
 
         /*Step 2:calculate total factors
         Normally it's 2*k (each small factor i pairs with n/i)*/
