@@ -41,7 +41,7 @@ vector<string> topArticles(int limit) {
 
 vector<pair<init, string>> articles; // (popularity, title) pairs
 
-auto processoage = [&](json data) {
+auto processpage = [&](json data) {
     for (auto& item : data["data"]){
         string name = "";
         if (!item["title"].is_null())
