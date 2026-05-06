@@ -14,7 +14,7 @@ long pthFactor(long n, long p) {
         }
 
         /*Step 2:calculate total factors
-        Mormally it's 2*k (each small factor i pairs with n/i)*/
+        Normally it's 2*k (each small factor i pairs with n/i)*/
         int is_perfect_square = (small[k - 1] * small[k - 1] == n);
         int total = 2 * k - is_perfect_square; // if n is a perfect square, we counted sqrt(n) twice
 
