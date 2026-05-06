@@ -2,7 +2,7 @@
 
 long pthFactor(long n, long p) {
     /*STRATEGY: Factors of n come in pairs (i, n/i) where i<= sqrt(n)
-    We collecr only the "small" half, iterating up to sqrt(n)*/
+    We collect only the "small" half, iterating up to sqrt(n)*/
 
     long small[100000]; // store factors <= sqrt(n); max divisor count for n<=10^15
     int k = 0;
