@@ -37,11 +37,12 @@ vector<string> topArticles(int limit) {
     json first = fetchpage(1);
     int total_pages = first[
 "total_pages"];
+return json::parse(response);
 }
 
-vector<pair<init, string>> articles; // (popularity, title) pairs
+vector<pair<int, string>> articles; // (popularity, title) pairs
 
-auto processpage = [&](json data) {
+auto processpage = [&](json& data) {
     for (auto& item : data["data"]){
         string name = "";
         if (!item["title"].is_null())
@@ -57,8 +58,8 @@ auto processpage = [&](json data) {
 };
 
 /*processing first page*/
-processpage(first);
-for (int p = 2; p <== total_pages; p) {
+processPage(first);
+for (int p = 2; p <= total_pages; p++) {
     json page = fetchpage(p);
     processpage(page);
 }
@@ -74,7 +75,7 @@ for (int i = 0; i < limit && i < (int)articles.size(); i++) {
 }
 
 return result;
-}
+
 
 int main() {
     int limit;
